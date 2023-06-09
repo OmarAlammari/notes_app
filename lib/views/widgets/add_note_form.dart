@@ -1,6 +1,6 @@
-import 'package:applaid_app_13_notes_app/views/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
+import 'custom_button.dart';
 import 'custom_text_field.dart';
 
 class AddNoteForm extends StatefulWidget {
@@ -43,10 +43,6 @@ class _AddNoteFormState extends State<AddNoteForm> {
             maxLines: 5,
           ),
           const SizedBox(height: 32),
-          // const ColorsListView(),
-          // const SizedBox(
-          //   height: 32,
-          // ),
           CustomButton(
             onTap: () {
               if (formKey.currentState!.validate()) {
