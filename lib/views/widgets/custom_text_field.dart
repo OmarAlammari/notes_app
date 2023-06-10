@@ -2,19 +2,23 @@ import '../../constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField(
-      {super.key,
-      required this.hint,
-      this.maxLines = 1,
-      this.onSaved,
-      this.onChanged});
+  const CustomTextField({
+    super.key,
+    required this.hint,
+    this.maxLines = 1,
+    this.onSaved,
+    this.controller,
+    this.onChanged,
+  });
 
   final String hint;
   final int maxLines;
+  final TextEditingController? controller;
 
   final void Function(String?)? onSaved;
 
   final Function(String)? onChanged;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -27,6 +31,8 @@ class CustomTextField extends StatelessWidget {
           return null;
         }
       },
+
+      // controller: controller ?? null,
       cursorColor: kPrimaryColor,
       maxLines: maxLines,
       decoration: InputDecoration(
