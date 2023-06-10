@@ -13,7 +13,7 @@ class NotesSuccess extends NotesState {
 
 }
 
-class AddNoteLoading extends NotesState {}
+class NotesLoading extends NotesState {}
 
 class NotesFailure extends NotesState {
   final String errMessage;
