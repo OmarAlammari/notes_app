@@ -2,9 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SimpleBlocObserver implements BlocObserver {
   @override
-  void onTransition(Bloc bloc, Transition transition) {
-    // print(transition);
-  }
+  void onTransition(Bloc bloc, Transition transition) {}
 
   @override
   void onChange(BlocBase bloc, Change change) {
@@ -13,24 +11,18 @@ class SimpleBlocObserver implements BlocObserver {
 
   @override
   void onClose(BlocBase bloc) {
-    // TODO: implement onClose
+    print('onClose => $bloc');
   }
 
   @override
   void onCreate(BlocBase bloc) {
-    // TODO: implement onCreate
+    print('onCreate => $bloc');
+
   }
 
   @override
-  void onError(BlocBase bloc, Object error, StackTrace stackTrace) {
-    // TODO: implement onError
-  }
+  void onError(BlocBase bloc, Object error, StackTrace stackTrace) {}
 
   @override
-  void onEvent(Bloc bloc, Object? event) {
-    // TODO: implement onEvent
-  }
-
-  
-  
+  void onEvent(Bloc bloc, Object? event) {}
 }
